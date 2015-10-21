@@ -23,7 +23,7 @@ INCLUDE_DIRECTORIES(
 )
 
 message ("Irrlicht src: " ${PROJECT_SOURCE_DIR} "/source/Irrlicht")
-FILE(GLOB SRCS "${PROJECT_SOURCE_DIR}/source/irrlicht/*.cpp")
+FILE(GLOB SRCS "${PROJECT_SOURCE_DIR}/source/Irrlicht/*.cpp")
 message ("Irrlicht hdrs: " ${PROJECT_SOURCE_DIR} "/include")
 FILE(GLOB HDRS "${PROJECT_SOURCE_DIR}/include/*.h")
 
