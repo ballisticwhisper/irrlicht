@@ -19,8 +19,10 @@ INCLUDE_DIRECTORIES(
    ${PROJECT_SOURCE_DIR}/include
 )
 
-FILE(GLOB SRCS source/irrlicht/*.cpp)
-FILE(GLOB HDRS include/*.h)
+message ("Irrlicht src: " ${PROJECT_SOURCE_DIR} "/source/irrlicht")
+FILE(GLOB SRCS "${PROJECT_SOURCE_DIR}/source/irrlicht/*.cpp")
+message ("Irrlicht hdrs: " ${PROJECT_SOURCE_DIR} "/include")
+FILE(GLOB HDRS "${PROJECT_SOURCE_DIR}/include/*.h")
 
 add_library(irrlicht ${SRCS} ${HDRS})
 
