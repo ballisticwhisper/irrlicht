@@ -15,11 +15,14 @@ ELSE(CMAKE_CXX_FLAGS_DEBUG)
    SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_BINARY_DIR}/release)
 ENDIF(CMAKE_CXX_FLAGS_DEBUG)
 
+FIND_PACKAGE(OpenGL)
+
 INCLUDE_DIRECTORIES(
+   ${OPENGL_INCLUDE_DIR}
    ${PROJECT_SOURCE_DIR}/include
 )
 
-message ("Irrlicht src: " ${PROJECT_SOURCE_DIR} "/source/irrlicht")
+message ("Irrlicht src: " ${PROJECT_SOURCE_DIR} "/source/Irrlicht")
 FILE(GLOB SRCS "${PROJECT_SOURCE_DIR}/source/irrlicht/*.cpp")
 message ("Irrlicht hdrs: " ${PROJECT_SOURCE_DIR} "/include")
 FILE(GLOB HDRS "${PROJECT_SOURCE_DIR}/include/*.h")
